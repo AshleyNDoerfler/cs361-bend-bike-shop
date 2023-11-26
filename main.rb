@@ -6,9 +6,11 @@ require_relative 'luggage'
 
 items = [:apple, :water, :protein_bar]
 
-luggage = Luggage.new(items)
+luggage = Luggage.new(200, items, nil)
 
 bike = Bike.new(1, :pink, 99.99, luggage)
+
+luggage.set_bike(bike)
 
 rental = Rental.new(bike)
 
