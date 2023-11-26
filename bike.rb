@@ -10,8 +10,8 @@ class Bike
   def initialize(id, color, price, extra_items)
     @id = id
     @color = color
-    @price = price
     @weight = STANDARD_WEIGHT
+    @price = price + (2 * weight)
     @luggage = Luggage.new(Luggage::DEFAULT_MAX_CAPACITY, extra_items, self)
   end
 
