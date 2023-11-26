@@ -2,7 +2,7 @@ class Luggage
 
   DEFAULT_MAX_CAPACITY = 10
 
-  attr_reader :items
+  attr_reader :items :bike
 
   def initialize(initial_capacity, items, bike)
     @capacity = initial_capacity
@@ -16,6 +16,10 @@ class Luggage
 
   def weight
     self.items.size * 10
+  end
+
+  def set_bike(bike)
+    self.bike << bike
   end
 
 end
